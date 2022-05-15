@@ -2,19 +2,20 @@ const Manager = require('../lib/manager');
 
 describe('Manager', () => {
     it('should be able to initialize the Manager Object', () => {
-        const man = new Manager(1)
-        expect(man.getOfficeNumber()).toEqual(1)
+        const man = new Manager(1, "John", "john@gmail.com", 12)
+        expect(man.getOfficeNumber()).toEqual(12)
+        expect(man.getRole()).toEqual('Manager')
     })
 
-    it('should throw an error if employee is initialized with ID is undefined', () => {
+    it('should throw an error if employee is initialized with office id is undefined', () => {
         expect(() => {
-            new Manager(undefined)
-        }).toThrow('Id is not a valid number')
+            const man = new Manager(1, "John", "john@gmail.com", undefined)
+        }).toThrow('Office number is not a valid number')
     })
-    // it('should throw an error if employee is initialized with ID is undefined', () => {
-    //     expect(() => {
-    //         new Employee("john", null, 'John@gmail.com')
-    //     }).toThrow('Id is not a valid number')
-    // })
+    it('should throw an error if employee is initialized with office id is null', () => {
+        expect(() => {
+            const man = new Manager(1, "John", "john@gmail.com", null)
+        }).toThrow('Office number is not a valid number')
+    })
 
 })

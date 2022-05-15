@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   * {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(236, 4, 82);
+    --secondary: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+#team-cards{
+    width: 56%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.card-header {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.card-body {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.container {
+    width: 100%;;
+    margin-top: 10%;
+    margin-left: 25%;
+    
+} 
+
+</style>
+<body>
+    <header>
+        <nav id="header">
+            <span>Team Profile</span>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="team-cards">
+                <!--Team Cards-->
+                
+                <div class="manager">
+                </div>
+                <div class="engineers">
+                    <!-- <div>
+                        <div class="card-header">
+                            <h3>Nicole</h3>
+                            <h4>Engineer</h4>
+                        </div>
+            
+                        <div class="card-body">
+                            <p class="id">ID: 4324</p>
+                            <p class="email">Email: <a href="mailto:nicole.elisaw@gmail.com">nicole.elisaw@gmail.com</a></p>
+                            <p class="github">Github: <a href="https://github.com/nicolewallace09">nicolewallace09</a></p>
+                        </div>
+            
+                    </div> -->
+                </div>
+                <div class="interns">
+                    <!-- <div>
+                        <div class="card-header">
+                            <h3>Jack</h3>
+                            <h4>Intern</h4>
+                        </div>
+            
+                        <div class="card-body">
+                            <p class="id">ID: 3799</p>
+                            <p class="email">Email:<a href="mailto:jack@aol.com">jack@aol.com</a></p>
+                            <p class="school">School: SFSU</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

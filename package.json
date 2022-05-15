@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/sajjazaidi2015/Team-Profile-Generator#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
     "inquirer": "^8.2.4",
     "jest": "^28.1.0"
   }
