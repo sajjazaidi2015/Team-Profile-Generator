@@ -15,56 +15,110 @@
     --primary: rgb(236, 4, 82);
     --secondary: white;
 }
+main{
+    height: 100vh
+
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#header {
+.header {
     background-color: var(--primary);
     color: var(--secondary);
     font-size: 50px;
+    text-align: center;
+    height: 90px;
+}
+.header span{
+    font-size: 25px;
+    
 }
 
 #team-cards{
-    width: 56%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 
 .card-header {
-    background-color: var(--primary);
+    background-color: #03a9f4;
     color: var(--secondary);
+    
+}
+.card-header h3,h4 {
+    margin: 10px;
 }
 
 .card-body {
     background-color: var(--secondary);
     color: var(--primary);
+    
+    margin: 15px;
+}
+.card-body p{
+  font-size: 15px;
+  color: black;
 }
 
 .container {
-    width: 100%;;
-    margin-top: 10%;
-    margin-left: 25%;
-    
+    display: flex;
+    justify-content: center;
+    margin-top: 66px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 80%;     
 } 
+.employee-box div{
+    border: 1px solid #d1c6c6;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px 0 rgb(80 74 74);
+    
+    
+}
+.interns{
+  display: contents;
+}
+.engineers{
+  display: contents;
+}
+.email{
+    border: 1px solid #d3cccc;
+    padding: 10px 00 10px;
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    
+    .card-body{
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
 
 </style>
 <body>
-    <header>
-        <nav id="header">
-            <span>Team Profile</span>
-        </nav>
+    <header class="header">
+        
+            <span>My Team</span>
+        
     </header>
     <main>
         <div class="container">
             <div id="team-cards">
                 <!--Team Cards-->
                 
-                <div class="manager">
+                <div class="manager employee-box">
                 </div>
-                <div class="engineers">
+                <div class="engineers employee-box">
                     <!-- <div>
                         <div class="card-header">
                             <h3>Nicole</h3>
@@ -79,7 +133,7 @@ body {
             
                     </div> -->
                 </div>
-                <div class="interns">
+                <div class="interns employee-box">
                     <!-- <div>
                         <div class="card-header">
                             <h3>Jack</h3>
