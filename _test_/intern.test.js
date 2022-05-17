@@ -5,6 +5,7 @@ describe('Intern', () => {
         const int = new Intern(1, "John", "john@gmail.com", "John")
         expect(int.getSchool()).toEqual("John")
         expect(int.getRole()).toEqual('Intern')
+        expect(int.getIcon()).toEqual('fas fa-user-graduate')
     })
 
     it('should throw an error if En is initialized with Username  is undefined', () => {

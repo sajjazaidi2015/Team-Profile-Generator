@@ -5,6 +5,7 @@ describe('Engineer', () => {
         const eng = new Engineer(1, "John", "john@gmail.com", "John")
         expect(eng.getGithub()).toEqual("John")
         expect(eng.getRole()).toEqual('Engineer')
+        expect(eng.getIcon()).toEqual('fas fa-user-alt')
     })
 
     it('should throw an error if En is initialized with Username  is undefined', () => {

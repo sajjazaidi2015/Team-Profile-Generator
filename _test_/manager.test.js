@@ -5,6 +5,7 @@ describe('Manager', () => {
         const man = new Manager(1, "John", "john@gmail.com", 12)
         expect(man.getOfficeNumber()).toEqual(12)
         expect(man.getRole()).toEqual('Manager')
+        expect(man.getIcon()).toEqual('fas fa-user-tie')
     })
 
     it('should throw an error if employee is initialized with office id is undefined', () => {
@@ -19,3 +20,4 @@ describe('Manager', () => {
     })
 
 })
+

@@ -24,7 +24,8 @@ function generateHtmlString(template, data) {
 function generateManagerCard(manager) {
   const managerCardHeaderTemplate = getCardHeaderTemplate(
     manager.getName(),
-    manager.getRole()
+    manager.getRole(),
+    manager.getIcon()
   );
   const managerCardBodyTemplate = getBodyTemplateForManager(
     manager.getId(),
@@ -39,15 +40,16 @@ function generateManagerCard(manager) {
     `;
 }
 
-function generateEngineerCard(engineers) {
+function generateEngineerCard(engineer) {
   const engineerCardHeaderTemplate = getCardHeaderTemplate(
-    engineers.getName(),
-    engineers.getRole()
+    engineer.getName(),
+    engineer.getRole(),
+    engineer.getIcon()
   );
   const engineerCardBodyTemplate = getBodyTemplateForEngineer(
-    engineers.getId(),
-    engineers.getEmail(),
-    engineers.getGithub()
+    engineer.getId(),
+    engineer.getEmail(),
+    engineer.getGithub()
   );
   return `
     <div>
@@ -56,15 +58,16 @@ function generateEngineerCard(engineers) {
     </div>
     `;
 }
-function generateInternCard(interns) {
+function generateInternCard(intern) {
   const internCardHeaderTemplate = getCardHeaderTemplate(
-    interns.getName(),
-    interns.getRole()
+    intern.getName(),
+    intern.getRole(),
+    intern.getIcon()
   );
   const internCardBodyTemplate = getBodyTemplateForIntern(
-    interns.getId(),
-    interns.getEmail(),
-    interns.getSchool()
+    intern.getId(),
+    intern.getEmail(),
+    intern.getSchool()
   );
   return `
     <div>
@@ -74,11 +77,11 @@ function generateInternCard(interns) {
     `;
 }
 
-function getCardHeaderTemplate(name, role) {
+function getCardHeaderTemplate(name, role, icon) {
   return `
       <div class="card-header">
         <h3>${name}</h3>
-        <h4>${role}</h4>
+        <h4><span><i class="${icon}"></i></span>${role}</h4>
       </div>
     `;
 }

@@ -8,6 +8,7 @@ describe('Employee', () => {
         expect(emp.getName()).toEqual('John')
         expect(emp.getEmail()).toEqual('John@gmail.com')
         expect(emp.getRole()).toEqual('Employee')
+        expect(emp.getIcon()).toEqual('fas fa-user-alt')
     })
     it('should throw an error if employee is initialized with Empty string name', () => {
         expect(() => {
